@@ -1,11 +1,15 @@
-<div id="elem">
-    <div id="elem-content">Element</div>
-  </div>
-  
+<ul>
+    <li>The</li>
+    <li>test</li>
+  </ul>
+  <ul>
+    <li>has</li>
+    <li>passed</li>
+  </ul>
   <script>
-    // 获取该元素
-    let elem = document.getElementById('elem');
+    let elements = document.querySelectorAll('ul > li:last-child');
   
-    // 将该元素背景改为红色
-    elem.style.background = 'red';
+    for (let elem of elements) {
+      alert(elem.innerHTML); // "test", "passed"
+    }
   </script>
